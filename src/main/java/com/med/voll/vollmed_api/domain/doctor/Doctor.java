@@ -15,15 +15,22 @@ import com.med.voll.vollmed_api.domain.address.Address;
 @Getter
 public class Doctor {
 
+    @Getter
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Getter
     private String name;
+    @Getter
     private String email;
+    @Getter
     private String phoneNumber;
+    @Getter
     private String crm;
+    @Getter
     @Enumerated(EnumType.STRING)
     private Expertise expertise;
+    @Getter
     @Embedded
     private Address address;
     private Boolean active;
@@ -36,28 +43,6 @@ public class Doctor {
         this.expertise = data.expertise();
         this.address = new Address(data.addressDetail());
         this.active = true;
-    }
-
-    public long getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-    public String getCrm() {
-        return crm;
-    }
-    public Expertise getExpertise() {
-        return expertise;
-    }
-    public Address getAddress() {
-        return address;
     }
 
     public void updateInfo(DoctorUpdateData data) {

@@ -3,7 +3,7 @@ package com.med.voll.vollmed_api.domain.address;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public record AddressDetail(
+public record AddressData(
         @NotBlank
         String street,
         @NotBlank

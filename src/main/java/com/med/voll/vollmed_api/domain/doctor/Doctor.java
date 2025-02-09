@@ -41,7 +41,7 @@ public class Doctor {
         this.phoneNumber = data.phoneNumber();
         this.crm = data.crm();
         this.expertise = data.expertise();
-        this.address = new Address(data.addressDetail());
+        this.address = new Address(data.addressData());
         this.active = true;
     }
 

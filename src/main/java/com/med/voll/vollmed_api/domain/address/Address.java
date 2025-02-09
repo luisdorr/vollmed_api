@@ -18,17 +18,17 @@ public class Address {
     String number;
     String complement;
 
-    public Address(AddressDetail addressDetail) {
-        this.street = addressDetail.street();
-        this.neighbourhood = addressDetail.neighbourhood();
-        this.addressCode = addressDetail.addressCode();
-        this.city = addressDetail.city();
-        this.fu = addressDetail.fu();
-        this.number = addressDetail.number();
-        this.complement = addressDetail.complement();
+    public Address(AddressData addressData) {
+        this.street = addressData.street();
+        this.neighbourhood = addressData.neighbourhood();
+        this.addressCode = addressData.addressCode();
+        this.city = addressData.city();
+        this.fu = addressData.fu();
+        this.number = addressData.number();
+        this.complement = addressData.complement();
     }
 
-    public void updateAddress(AddressDetail data) {
+    public void updateAddress(AddressData data) {
         this.street = (data.street() != null) ? data.street() : this.street;
         this.neighbourhood = (data.neighbourhood() != null) ? data.neighbourhood() : this.neighbourhood;
         this.addressCode = (data.addressCode() != null) ? data.addressCode() : this.addressCode;

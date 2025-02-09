@@ -16,7 +16,7 @@ public interface DoctorRepository extends JpaRepository<Doctor, Long> {
         WHERE
         d.active = true
         and
-        d.expertise = :specialty
+        d.expertise = :expertise
         and
         d.id not in (
             SELECT a.doctor.id FROM Appointment a
